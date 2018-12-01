@@ -28,7 +28,8 @@ class QQEGame(VideoExtractor):
         self.pid = self.vid
 
         # from upstream!!
-        serverDataTxt = match1(html, 'serverData = {([\S\ ]+)};')
+        serverDataTxt = match1(html, 'serverData = {([\S\ ]+)};') 
+        #get error here line 31
         serverDataTxt = '{%s}' % (serverDataTxt)
         self.logger.debug("serverDataTxt => %s" % (serverDataTxt))
 
